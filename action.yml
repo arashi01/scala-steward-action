@@ -34,6 +34,10 @@ inputs:
     description: 'Whether to ignore "opts" files (such as `.jvmopts` or `.sbtopts`) when found on repositories or not'
     default: "true"
     required: false
+  do-not-fork:
+    description: 'Whether to fork a repository or create pull requests directly on the repository instead.'
+    default: "true"
+    required: false
   branches:
     description:
       A comma-separated list of branches to update (if not provided, the repository's default branch will be

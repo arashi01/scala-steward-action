@@ -46,6 +46,7 @@ async function run(): Promise<void> {
     const signCommits = /true/i.test(core.getInput('sign-commits'))
     const signingKey = core.getInput('signing-key')
     const ignoreOptionsFiles = /true/i.test(core.getInput('ignore-opts-files'))
+    const doNotFork = /true/i.test(core.getInput('do-not-fork'))
     const githubApiUrl = core.getInput('github-api-url')
     const scalafixMigrations = core.getInput('scalafix-migrations')
       ? ['--scalafix-migrations', core.getInput('scalafix-migrations')]
@@ -79,7 +80,7 @@ async function run(): Promise<void> {
       scalafixMigrations,
       artifactMigrations,
       defaultRepoConf,
-      '--do-not-fork',
+      doNotFork ? '--do-not-fork' : [],
       '--disable-sandbox',
       githubAppArgs,
     ])

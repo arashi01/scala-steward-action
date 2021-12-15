@@ -90,6 +90,7 @@ The following inputs are available (all of them are optional):
 | <details><summary>`author-name`</summary><br/>Author name to use in commits</details> | String | Github user's *Name* |
 | <details><summary>`scala-steward-version`</summary><br/>Scala Steward version to use</details> | Valid [Scala Steward's version](https://github.com/scala-steward-org/scala-steward/releases) | `0.14.0` |
 | <details><summary>`ignore-opts-files`</summary><br/>Whether to ignore "opts" files (such as `.jvmopts` or `.sbtopts`) when found on repositories or not</details> | true/false | `true` |
+| <details><summary>`do-not-fork`</summary><br/>Whether to fork a repository or create pull requests directly on the repository instead.</details>                                                                                                                                                                                                  | true/false | `true` |
 | <details><summary>`sign-commits`</summary><br/>Whether to sign commits or not</details> | true/false | `false` |
 | <details><summary>`signing-key`</summary><br/>Key ID of signing key to use for signing commits. Analogous to git's `user.signingkey` configuration setting.</details> | Signing key ID | ' ' |
 | <details><summary>`cache-ttl`</summary><br/>TTL of cache for fetching dependency versions and metadata. Set it to `0s` to disable cache completely.</details> | like 24hours, 5min, 10s, or 0s | `2hours` |
